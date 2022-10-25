@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.title}}</title>
+</head>
+<style>
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+    <div>
+        <table style="width:100%">
+            <tr>
+           
+
+                <th>Water Level</th>
+                <th>Status</th>
+                <th>Wind Level</th>
+                <th>Status</th>
+              </tr>
+              {{range $value := .data}}
+              <tr>
+               
+                <td>{{$value.WaterLevel}}</td>
+                <td>{{$value.WaterStatus}}</td>
+                <td>{{$value.WindLevel}}</td>
+                <td>{{$value.WindStatus}}</td>
+              </tr>
+              {{end}}
+        </table>
+    </div>
+</body>
+</html>
